@@ -13,41 +13,41 @@ I hold an MSc in Theoretical and Computational Methods from the University of He
 
 Alongside academia, I have around 10 years of experience as a software engineer. Most recently, I led the technical side of a game development project at Netflix. This mix of research and engineering strongly shapes how I work: I am interested in methods that are mathematically grounded, computationally useful, and practical enough to become real tools.
 
-## About
+My current work sits at the intersection of molecular simulation, statistical modeling, machine learning, and scientific computing. I am especially interested in how local molecular fluctuations encode information about global thermodynamic and kinetic behavior, and how that can be used to guide molecular design. More broadly, I like working on problems where computation is not only used to analyze data, but also to build new ways of thinking about physical systems.
 
-My current work sits at the intersection of molecular simulation, statistical modeling, machine learning, and scientific computing. I am especially interested in how local molecular fluctuations can encode information about global thermodynamic and kinetic behavior, and how this information can be used to guide molecular design.
+### Featured Research
 
-More broadly, I like working on problems where computation is not only used to analyze data, but also to build new ways of thinking about physical systems. This site collects my papers, code, research projects, and scientific software in one place.
+My research sits between molecular simulation, statistical modeling, and scientific computing. I am interested in building computational methods that extract useful low-dimensional structure from complex systems, whether the system is a molecular trajectory, a free-energy landscape, or a space of graphical models.
 
-## Featured Research
+## Molecular simulation and collective variables
 
-My recent research focuses on using collective variables to understand and control peptide kinetics through free-energy surface engineering. In particular, I work with the Collective Variables for Free Energy Surface Tailoring framework, or CV-FEST, together with Harmonic Linear Discriminant Analysis, or HLDA, to build interpretable low-dimensional representations of molecular systems.
+My current work focuses on collective variables, free-energy surface engineering, and peptide kinetics. In particular, I use the Collective Variables for Free Energy Surface Tailoring framework (CV-FEST) together with Harmonic Linear Discriminant Analysis (HLDA) to build low-dimensional, interpretable descriptions of molecular motion.
 
-In our recent work, we showed that HLDA-based collective variables constructed from short simulations confined to folded and unfolded states can provide useful information about mutation-dependent peptide unfolding kinetics. This suggests that local in-basin fluctuations can already contain signals related to global barrier-crossing behavior, allowing us to predict and guide changes in conformational transition rates without exhaustive rare-event sampling.
+One direction I am especially interested in is how local fluctuations inside metastable states can already encode information about barrier crossing and conformational change. This opens the possibility of guiding molecular kinetics with much less sampling than traditional rare-event approaches require.
+
+## Statistical structure learning
+
+My earlier research focused on sampling Markov equivalent directed acyclic graphs (DAGs) for Bayesian network discovery. In that work, I studied how to sample and count acyclic moral orientations, which represent Markov equivalence classes and are important for understanding uncertainty in learned Bayesian network structures.
 
 Key topics include:
 
-- Collective Variables (CVs)
-- CV-FEST
-- HLDA
-- Free-Energy Surface Engineering
-- Peptide Kinetics
-- Molecular Simulation
-- Rare-event Sampling
-- mutation-dependent unfolding rates
-- interpretable machine learning for molecular systems
+- Collective variables and reduced representations
+- CV-FEST and free-energy surface engineering
+- Harmonic Linear Discriminant Analysis (HLDA)
+- Peptide kinetics and mutation-dependent unfolding rates
+- Molecular simulation and rare-event sampling
+- Markov chain Monte Carlo (MCMC)
+- Bayesian networks and Markov equivalent DAGs
+- Sampling and counting acyclic moral orientations
+- Interpretable machine learning for physical and statistical systems
 
-Featured paper:
+{% include featured-paper-card.liquid %}
 
-**Guiding Peptide Kinetics via Collective-Variable Tuning of Free-Energy Barriers**
+## Open-Source Project
 
-Links: DOI / arXiv / GitHub / Zenodo
+I co-authored [lammps.js](https://github.com/lammps/lammps.js), an open-source project that compiles LAMMPS for the browser through WebAssembly and makes interactive molecular simulation possible on the web. The live bead-chain demo below is one example of that workflow in practice.
 
-## Lab
-
-I am part of the [Mendels Lab for Computational Molecular Engineering](https://mendelsgroup.net.technion.ac.il/) at the Technion. The lab develops computational approaches for molecular design, soft matter, and complex biological and chemical systems, combining simulation, theory, and data-driven methods.
-
-What I value about the group is that it treats computation both as a scientific lens and as an engineering discipline. This makes it a strong environment for developing new methods while staying connected to real molecular-science problems.
+{% include simulation-panel.liquid %}
 
 ## Contact
 

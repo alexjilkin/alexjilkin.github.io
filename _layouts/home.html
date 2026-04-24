@@ -13,44 +13,6 @@ layout: default
     <div class="editorial-body">
       {{ content }}
     </div>
-
-    <section class="homepage-simulation editorial-section">
-      <div class="section-kicker">Interactive project</div>
-      <h2>Live Simulation</h2>
-      <p class="home-sim-intro">
-        This browser-side molecular demo is built around
-        <a href="https://github.com/lammps/lammps.js">lammps.js</a>, the open-source project that brings
-        LAMMPS into the browser through WebAssembly.
-      </p>
-      {% include simulation-panel.liquid %}
-    </section>
-
-    {% assign featured = site.data.publications | where: "featured", true %}
-    {% if featured.size > 0 %}
-    <section class="featured-papers editorial-section">
-      <div class="section-kicker">Selected paper</div>
-      <h2>Featured Research</h2>
-      {% for paper in featured %}
-      <div class="publication-card featured-publication-card">
-        <p class="pub-label">Featured Paper</p>
-        <h3>{{ paper.title }}</h3>
-        <p class="pub-meta">{{ paper.authors }}</p>
-        <p class="pub-venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</p>
-        {% if paper.summary %}
-        <p class="pub-summary">{{ paper.summary }}</p>
-        {% endif %}
-        <p class="pub-links">
-          {% if paper.paper %}<a href="{{ paper.paper }}">Paper</a>{% endif %}
-          {% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}">DOI</a>{% endif %}
-          {% if paper.arxiv %}<a href="https://arxiv.org/abs/{{ paper.arxiv }}">arXiv</a>{% endif %}
-          {% if paper.thesis %}<a href="{{ paper.thesis }}">Thesis</a>{% endif %}
-          {% if paper.github %}<a href="{{ paper.github }}">GitHub</a>{% endif %}
-          {% if paper.zenodo %}<a href="{{ paper.zenodo }}">Zenodo</a>{% endif %}
-        </p>
-      </div>
-      {% endfor %}
-    </section>
-    {% endif %}
   </article>
 </div>
 

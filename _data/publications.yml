@@ -6,6 +6,7 @@
   featured: true
   summary: "Introduces a framework for rationally modifying free-energy surfaces to control conformational transition rates, using HLDA-based collective variables derived from limited metastable-state sampling."
   doi: "10.1021/acs.jctc.6c00418"
+  paper: "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00418"
   arxiv: "2602.19936"
 
 - title: "Scaling Up Bayesian DAG Sampling"
@@ -15,3 +16,13 @@
   featured: false
   summary: "Presents more efficient Bayesian DAG sampling methods, including faster basic graph moves and approximate parent-set pruning to improve scalability."
   arxiv: "2510.25254"
+
+- title: "Enhancing Bayesian Network Discovery by Sampling Markov Equivalent DAGs"
+  authors: "Alex Zhilkin"
+  venue: "Master's thesis, University of Helsinki"
+  year: 2025
+  status: "Master's thesis"
+  featured: false
+  summary: "Introduces a Markov Equivalent Step for Bayesian network structure discovery MCMC, improving convergence and exploration of complex network-structure posteriors."
+  thesis: "https://helda.helsinki.fi/server/api/core/bitstreams/d6264dcb-a219-45b6-abdb-b28f1e70b85a/content"
+  github: "https://github.com/Sums-of-Products/emci"

@@ -6,5 +6,3 @@ permalink: /publications/
 nav: true
 nav_order: 2
 ---
-
-This page is generated from `_data/publications.yml` so it stays easy to edit without touching templates.

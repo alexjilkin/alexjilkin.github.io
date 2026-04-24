@@ -1,6 +1,6 @@
-title: Alex Jilkin
+title: Alex Zhilkin
 description: Personal academic website
-url: "https://alexjilkin.github.io"
+url: "https://alex-zhilkin.github.io"
 baseurl: ""
 lang: en
 
@@ -21,9 +21,9 @@ enable_medium_zoom: false
 enable_navbar_social: true
 
 author:
-  name: Alex Jilkin
+  name: Alex Zhilkin
   email: jilkinalex@gmail.com
-  github: alexjilkin
+  github: alex-zhilkin
   linkedin: alex-zhilkin
   scholar_userid: LKxy80oAAAAJ
   orcid: 0009-0002-7205-1387

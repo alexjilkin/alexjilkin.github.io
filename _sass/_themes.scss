@@ -1,0 +1,200 @@
+/*******************************************************************************
+ * Themes
+ * Local editorial/scientific palette override.
+ ******************************************************************************/
+@use "variables" as v;
+@use "sass:color";
+
+:root {
+  color-scheme: light;
+  --global-bg-color: #{v.$white-color};
+  --global-code-bg-color: #{v.$code-bg-color-light};
+  --global-text-color: #{v.$black-color};
+  --global-text-color-light: #{v.$grey-color};
+  --global-theme-color: #{v.$green-color-dark};
+  --global-hover-color: #{v.$cyan-color};
+  --global-hover-text-color: #{v.$white-color};
+  --global-footer-bg-color: #1b2731;
+  --global-footer-text-color: #d9ddd7;
+  --global-footer-link-color: #f6f2ea;
+  --global-distill-app-color: #{v.$grey-color};
+  --global-divider-color: rgba(21, 32, 43, 0.12);
+  --global-card-bg-color: #fbf8f2;
+  --global-highlight-color: #{v.$orange-color};
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel(v.$green-color-dark, "red", $space: rgb)},
+    #{color.channel(v.$green-color-dark, "green", $space: rgb)},
+    #{color.channel(v.$green-color-dark, "blue", $space: rgb)},
+    0.88
+  );
+  --global-back-to-top-text-color: #{v.$white-color};
+  --global-newsletter-bg-color: #fbf8f2;
+  --global-newsletter-text-color: #{v.$black-color};
+
+  --global-tip-block: #4b8a7f;
+  --global-tip-block-bg: #e5f0ec;
+  --global-tip-block-text: #1f4944;
+  --global-tip-block-title: #2f6f65;
+  --global-warning-block: #c49a52;
+  --global-warning-block-bg: #fbf0db;
+  --global-warning-block-text: #6f5324;
+  --global-warning-block-title: #9a6f2b;
+  --global-danger-block: #ab4b3a;
+  --global-danger-block-bg: #f7e4e0;
+  --global-danger-block-text: #5e241b;
+  --global-danger-block-title: #8f3f2c;
+
+  #light-toggle-system {
+    display: inline-block;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: v.$back-to-top-bottom;
+    right: v.$back-to-top-right;
+    height: v.$back-to-top-height;
+    width: v.$back-to-top-width;
+    z-index: v.$back-to-top-z-index;
+  }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --global-bg-color: #111a22;
+  --global-code-bg-color: #{v.$code-bg-color-dark};
+  --global-text-color: #d8ddd8;
+  --global-text-color-light: #95a2ab;
+  --global-theme-color: #74b1a7;
+  --global-hover-color: #90c6ba;
+  --global-hover-text-color: #111a22;
+  --global-footer-bg-color: #d8ddd8;
+  --global-footer-text-color: #111a22;
+  --global-footer-link-color: #111a22;
+  --global-distill-app-color: #d8ddd8;
+  --global-divider-color: rgba(216, 221, 216, 0.12);
+  --global-card-bg-color: #17232d;
+  --global-highlight-color: #d2a45a;
+  --global-back-to-top-bg-color: rgba(216, 221, 216, 0.24);
+  --global-back-to-top-text-color: #f6f2ea;
+  --global-newsletter-bg-color: #17232d;
+  --global-newsletter-text-color: #d8ddd8;
+
+  --global-tip-block: #7bb1a6;
+  --global-tip-block-bg: #17312d;
+  --global-tip-block-text: #d8f2eb;
+  --global-tip-block-title: #9ed0c6;
+  --global-warning-block: #d2a45a;
+  --global-warning-block-bg: #473519;
+  --global-warning-block-text: #f8e7c6;
+  --global-warning-block-title: #f0cf8d;
+  --global-danger-block: #d67562;
+  --global-danger-block-bg: #47221b;
+  --global-danger-block-text: #f7ddd7;
+  --global-danger-block-title: #efae9e;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+}
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: inline-block;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px;
+  transform: translateX(-1px);
+}
+
+#light-toggle:hover .fa-half-sun-moon::before,
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
+}

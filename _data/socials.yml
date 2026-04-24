@@ -1,0 +1,8 @@
+# Navbar social icons for al-folio.
+# Explicitly override the theme defaults so only the desired links remain.
+cv_pdf:
+email:
+inspirehep_id:
+rss_icon: false
+scholar_userid: LKxy80oAAAAJ
+linkedin_username: alex-zhilkin

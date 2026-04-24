@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * Local override for a warmer editorial research aesthetic.
+ ******************************************************************************/
+
+@use "sass:color";
+
+// Core palette
+$red-color: #c85f3d !default;
+$red-color-dark: #8f3f2c !default;
+$orange-color: #c98a43 !default;
+$blue-color: #2b5b78 !default;
+$blue-color-dark: #16364b !default;
+$cyan-color: #2f7a78 !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 22%);
+$green-color: #3f7f73 !default;
+$green-color-lime: #a9b76f !default;
+$green-color-dark: #2a5d57 !default;
+$green-color-light: #e5f0ec !default;
+$green-color-bright: #4fa08f !default;
+$purple-color: #2f7a78 !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 22%);
+$pink-color: #b96f66 !default;
+$pink-color-light: #f4e6e2 !default;
+$yellow-color: #c49a52 !default;
+
+$grey-color: #7a7f85 !default;
+$grey-color-light: #d7d4cd !default;
+$grey-color-dark: #17212b;
+$grey-900: #1b2731;
+
+$white-color: #f6f2ea !default;
+$black-color: #15202b !default;
+
+// Theme colors
+$code-bg-color-light: rgba($green-color-dark, 0.06);
+$code-bg-color-dark: #202a33 !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
+
+// Max width default
+$max-content-width: 980px !default;

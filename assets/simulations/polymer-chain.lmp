@@ -1,0 +1,53 @@
+clear
+units           lj
+dimension       2
+boundary        p p p
+atom_style      bond
+special_bonds   fene
+
+region          box block -14 14 -14 14 -0.25 0.25
+create_box      1 box bond/types 1 extra/bond/per/atom 2 extra/special/per/atom 12
+
+mass            1 1.0
+
+variable        n equal 28
+variable        spacing equal 0.97
+variable        x0 equal -13.0
+
+label           create_atoms_loop
+variable        i loop ${n}
+variable        xpos equal v_x0 + (v_i - 1) * v_spacing
+create_atoms    1 single ${xpos} 0.0 0.0
+next            i
+jump            SELF create_atoms_loop
+
+label           create_bonds_loop
+variable        j loop 27
+variable        k equal v_j + 1
+create_bonds    single/bond 1 ${j} ${k}
+next            j
+jump            SELF create_bonds_loop
+
+bond_style      fene
+bond_coeff      1 30.0 1.5 1.0 1.0
+
+pair_style      lj/cut 1.122462048
+pair_modify     shift yes
+pair_coeff      1 1 1.0 1.0 1.122462048
+
+neighbor        0.5 bin
+neigh_modify    every 1 delay 0 check yes
+
+velocity        all create 0.35 48291 mom yes rot no dist gaussian
+
+fix             int all nve
+fix             bath all langevin 0.35 0.35 2.0 92834 zero yes
+fix             plane all enforce2d
+
+variable        wave_y atom 0.06*sin(0.65*x + 0.025*step)
+fix             drive all addforce 0.0 v_wave_y 0.0
+
+timestep        0.0005
+thermo          1000
+
+run             100000000

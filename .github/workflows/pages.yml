@@ -21,6 +21,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -29,6 +35,12 @@ jobs:
         with:
           ruby-version: "3.2"
           bundler-cache: true
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build simulation bundle
+        run: npm run build:sim
 
       - name: Build site
         run: bundle exec jekyll build --source . --destination ./_site

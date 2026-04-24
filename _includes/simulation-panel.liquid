@@ -1,0 +1,38 @@
+<section
+  id="polymer-sim"
+  class="simulation-panel"
+  data-input-url="{{ '/assets/simulations/polymer-chain.lmp' | relative_url }}"
+>
+  <div class="simulation-stage">
+    <canvas id="polymer-canvas" aria-label="Interactive polymer simulation"></canvas>
+    <div class="simulation-overlay">
+      <div class="sim-kicker">Open-source project</div>
+      <div class="sim-status-group">
+        <div class="sim-project">
+          <a href="https://github.com/lammps/lammps.js">lammps.js</a>
+          <span>browser-native molecular simulation with LAMMPS and WebAssembly</span>
+        </div>
+        <div id="sim-status" class="sim-status">Loading simulation...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="simulation-metrics">
+    <div class="sim-metric">
+      <span class="sim-label">State</span>
+      <span id="sim-state" class="sim-value">Initializing</span>
+    </div>
+    <div class="sim-metric">
+      <span class="sim-label">Radius of gyration</span>
+      <span id="sim-rg" class="sim-value">--</span>
+    </div>
+    <div class="sim-metric">
+      <span class="sim-label">End-to-end</span>
+      <span id="sim-e2e" class="sim-value">--</span>
+    </div>
+    <div class="sim-metric">
+      <span class="sim-label">Timestep</span>
+      <span id="sim-step" class="sim-value">--</span>
+    </div>
+  </div>
+</section>

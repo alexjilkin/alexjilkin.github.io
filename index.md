@@ -49,11 +49,6 @@ I am part of the [Mendels Lab for Computational Molecular Engineering](https://m
 
 What I value about the group is that it treats computation both as a scientific lens and as an engineering discipline. This makes it a strong environment for developing new methods while staying connected to real molecular-science problems.
 
-## Open Source
-
-I co-developed [lammps.js](https://github.com/lammps/lammps.js), an open-source project that brings LAMMPS to the browser through WebAssembly-based tooling. The project makes it possible to run and interact with LAMMPS-based simulations in web environments, opening the door to more accessible and shareable scientific computing tools.
-
-
 ## Contact
 
 - Email: [jilkinalex@gmail.com](mailto:jilkinalex@gmail.com)

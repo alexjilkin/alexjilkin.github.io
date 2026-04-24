@@ -1,0 +1,12 @@
+{
+  "name": "alex-zhilkin-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:sim": "node scripts/build-sim.mjs"
+  },
+  "dependencies": {
+    "lammps.js": "1.2.1",
+    "three": "^0.170.0"
+  }
+}

@@ -1,0 +1,17 @@
+- title: "Guiding Peptide Kinetics via Collective-Variable Tuning of Free-Energy Barriers"
+  authors: "Alexander Zhilkin, Muralika Medaparambath, Dan Mendels"
+  venue: "Journal of Chemical Theory and Computation"
+  year: 2026
+  status: "recent paper"
+  featured: true
+  summary: "Introduces a framework for rationally modifying free-energy surfaces to control conformational transition rates, using HLDA-based collective variables derived from limited metastable-state sampling."
+  doi: "10.1021/acs.jctc.6c00418"
+  arxiv: "2602.19936"
+
+- title: "Scaling Up Bayesian DAG Sampling"
+  authors: "Daniele Nikzad, Alexander Zhilkin, Juha Harviainen, Jack Kuipers, Giusi Moffa, Mikko Koivisto"
+  venue: "arXiv preprint"
+  year: 2025
+  featured: false
+  summary: "Presents more efficient Bayesian DAG sampling methods, including faster basic graph moves and approximate parent-set pruning to improve scalability."
+  arxiv: "2510.25254"

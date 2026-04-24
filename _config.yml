@@ -1,0 +1,36 @@
+title: Alex Jilkin
+description: Personal academic website
+url: "https://alexjilkin.github.io"
+baseurl: ""
+lang: en
+
+remote_theme: alshedivat/al-folio
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+navbar_fixed: true
+footer_fixed: false
+search_enabled: false
+bib_search: false
+enable_progressbar: false
+enable_medium_zoom: false
+enable_navbar_social: true
+
+author:
+  name: Alex Jilkin
+  email: jilkinalex@gmail.com
+  github: alexjilkin
+  linkedin: alex-zhilkin
+  scholar_userid: LKxy80oAAAAJ
+  orcid: 0009-0002-7205-1387
+
+socials_in_search: false
+max_width: 930px
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

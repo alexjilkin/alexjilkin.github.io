@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="post">
+  <style>
+    .post .desc { max-width: 42rem; }
+    .featured-papers { margin-top: 2rem; }
+    .publication-card { padding: 1rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+    .publication-card h3 { margin-bottom: 0.35rem; }
+    .pub-meta { margin-bottom: 0.35rem; }
+    .pub-links a { margin-right: 0.9rem; font-weight: 600; }
+  </style>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="desc">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    {{ content }}
+
+    {% assign featured = site.data.publications | where: "featured", true %}
+    {% if featured.size > 0 %}
+    <section class="featured-papers">
+      <h2>Featured Research</h2>
+      {% for paper in featured %}
+      <div class="publication-card">
+        <h3>{{ paper.title }}</h3>
+        <p class="pub-meta">{{ paper.authors }}<br>{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</p>
+        {% if paper.summary %}
+        <p>{{ paper.summary }}</p>
+        {% endif %}
+        <p class="pub-links">
+          {% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}">DOI</a>{% endif %}
+          {% if paper.arxiv %}<a href="https://arxiv.org/abs/{{ paper.arxiv }}">arXiv</a>{% endif %}
+          {% if paper.github %}<a href="{{ paper.github }}">GitHub</a>{% endif %}
+          {% if paper.zenodo %}<a href="{{ paper.zenodo }}">Zenodo</a>{% endif %}
+        </p>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </article>
+</div>

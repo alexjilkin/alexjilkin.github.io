@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Alex Zhilkin
+title: Alexander "Alex" Zhilkin
 subtitle: PhD student working on computational molecular engineering, molecular simulation, machine learning, and scientific software.
 permalink: /
 nav: true

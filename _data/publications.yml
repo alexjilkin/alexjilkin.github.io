@@ -5,6 +5,7 @@
   status: "recent paper"
   featured: true
   summary: "Introduces a framework for rationally modifying free-energy surfaces to control conformational transition rates, using HLDA-based collective variables derived from limited metastable-state sampling."
+  details: "/papers/guiding-peptide-kinetics/"
   doi: "10.1021/acs.jctc.6c00418"
   paper: "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00418"
   arxiv: "2602.19936"
@@ -18,7 +19,7 @@
   arxiv: "2510.25254"
 
 - title: "Enhancing Bayesian Network Discovery by Sampling Markov Equivalent DAGs"
-  authors: "Alex Zhilkin"
+  authors: "Alexander Zhilkin"
   venue: "Master's thesis, University of Helsinki"
   year: 2025
   status: "Master's thesis"

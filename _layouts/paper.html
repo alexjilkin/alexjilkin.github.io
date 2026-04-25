@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="post paper-page">
+  <header class="post-header paper-header">
+    {% if page.kicker %}
+    <p class="section-kicker">{{ page.kicker }}</p>
+    {% endif %}
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="desc">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.authors or page.venue or page.year %}
+    <p class="paper-citation">
+      {% if page.authors %}{{ page.authors }}{% endif %}
+      {% if page.venue %}<span>{{ page.venue }}</span>{% endif %}
+      {% if page.year %}<span>{{ page.year }}</span>{% endif %}
+    </p>
+    {% endif %}
+    <p class="pub-links paper-actions">
+      {% if page.paper %}<a href="{{ page.paper }}">Paper</a>{% endif %}
+      {% if page.doi %}<a href="https://doi.org/{{ page.doi }}">DOI</a>{% endif %}
+      {% if page.arxiv %}<a href="https://arxiv.org/abs/{{ page.arxiv }}">arXiv</a>{% endif %}
+      {% if page.github %}<a href="{{ page.github }}">GitHub</a>{% endif %}
+      {% if page.zenodo %}<a href="{{ page.zenodo }}">Zenodo</a>{% endif %}
+    </p>
+  </header>
+
+  <article>
+    <div class="paper-grid">
+      <aside class="paper-facts" aria-label="Paper facts">
+        {% if page.status %}
+        <div>
+          <span>Status</span>
+          <strong>{{ page.status }}</strong>
+        </div>
+        {% endif %}
+        {% if page.system %}
+        <div>
+          <span>System</span>
+          <strong>{{ page.system }}</strong>
+        </div>
+        {% endif %}
+        {% if page.methods %}
+        <div>
+          <span>Methods</span>
+          <strong>{{ page.methods | join: ", " }}</strong>
+        </div>
+        {% endif %}
+      </aside>
+      <div class="editorial-body paper-body">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+</div>

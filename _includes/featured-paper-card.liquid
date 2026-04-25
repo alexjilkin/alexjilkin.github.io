@@ -10,6 +10,7 @@
     <p class="pub-summary">{{ paper.summary }}</p>
     {% endif %}
     <p class="pub-links">
+      {% if paper.details %}<a href="{{ paper.details | relative_url }}">Details</a>{% endif %}
       {% if paper.paper %}<a href="{{ paper.paper }}">Paper</a>{% endif %}
       {% if paper.doi %}<a href="https://doi.org/{{ paper.doi }}">DOI</a>{% endif %}
       {% if paper.arxiv %}<a href="https://arxiv.org/abs/{{ paper.arxiv }}">arXiv</a>{% endif %}

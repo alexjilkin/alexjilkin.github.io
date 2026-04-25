@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Alexander "Alex" Zhilkin
+title: Alexander Zhilkin
 subtitle: PhD student working on computational molecular engineering, molecular simulation, machine learning, and scientific software.
 permalink: /
 nav: true
@@ -25,23 +25,15 @@ My current work focuses on collective variables, free-energy surface engineering
 
 One direction I am especially interested in is how local fluctuations inside metastable states can already encode information about barrier crossing and conformational change. This opens the possibility of guiding molecular kinetics with much less sampling than traditional rare-event approaches require.
 
+**Key topics:** collective variables and reduced representations; CV-FEST and free-energy surface engineering; Harmonic Linear Discriminant Analysis (HLDA); peptide kinetics and mutation-dependent unfolding rates; molecular simulation and rare-event sampling.
+
+{% include featured-paper-card.liquid %}
+
 ## Statistical structure learning
 
 My earlier research focused on sampling Markov equivalent directed acyclic graphs (DAGs) for Bayesian network discovery. In that work, I studied how to sample and count acyclic moral orientations, which represent Markov equivalence classes and are important for understanding uncertainty in learned Bayesian network structures.
 
-Key topics include:
-
-- Collective variables and reduced representations
-- CV-FEST and free-energy surface engineering
-- Harmonic Linear Discriminant Analysis (HLDA)
-- Peptide kinetics and mutation-dependent unfolding rates
-- Molecular simulation and rare-event sampling
-- Markov chain Monte Carlo (MCMC)
-- Bayesian networks and Markov equivalent DAGs
-- Sampling and counting acyclic moral orientations
-- Interpretable machine learning for physical and statistical systems
-
-{% include featured-paper-card.liquid %}
+**Key topics:** Markov chain Monte Carlo (MCMC); Bayesian networks and Markov equivalent DAGs; sampling and counting acyclic moral orientations; interpretable machine learning for physical and statistical systems.
 
 ## Open-Source Project
 

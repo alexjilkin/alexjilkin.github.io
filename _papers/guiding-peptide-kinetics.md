@@ -1,8 +1,8 @@
 ---
 layout: paper
 title: Guiding Peptide Kinetics via Collective-Variable Tuning of Free-Energy Barriers
-subtitle: A CV-FEST and HLDA workflow for predicting how point mutations can accelerate or slow peptide conformational transitions from limited local sampling.
-kicker: Paper Detail
+subtitle: A CV-FEST and HLDA framework for estimating mutation-dependent changes in peptide conformational kinetics from metastable-state simulations.
+kicker: Research Article
 authors: Alexander Zhilkin, Muralika Medaparambath, Dan Mendels
 venue: Journal of Chemical Theory and Computation
 year: 2026
@@ -18,43 +18,41 @@ paper: https://pubs.acs.org/doi/10.1021/acs.jctc.6c00418
 arxiv: "2602.19936"
 ---
 
-## Gist
+## Overview
 
-The paper asks whether peptide kinetics can be guided without exhaustively simulating every mutation. Instead of treating mutation effects as something that must be learned from large datasets or long transition trajectories, it uses short molecular dynamics trajectories inside metastable folded and unfolded states to build a collective variable.
+This work studies whether mutation-dependent peptide kinetics can be estimated without exhaustively simulating transition events for every candidate mutation. The approach uses molecular dynamics trajectories sampled within folded and unfolded metastable states to construct a collective variable that captures kinetic sensitivity.
 
-That collective variable is constructed with Harmonic Linear Discriminant Analysis (HLDA), then used within the Collective Variables for Free Energy Surface Tailoring (CV-FEST) framework. The key idea is that local fluctuations inside the stable states already contain information about the free-energy barrier separating them.
+The collective variable is constructed with Harmonic Linear Discriminant Analysis (HLDA) and used within the Collective Variables for Free Energy Surface Tailoring (CV-FEST) framework. The central assumption is that local fluctuations inside metastable states contain information about the free-energy barrier separating those states.
 
-## Main Result
+## Results
 
-For Chignolin point mutations, the HLDA collective variable derived from the wild-type system gives residue-level scores that indicate whether mutations at particular positions are likely to speed up or slow down conformational transitions.
+For Chignolin point mutations, the HLDA collective variable derived from the wild-type system produces residue-level scores that identify positions where mutations are expected to accelerate or slow conformational transitions.
 
-The paper also reports that the leading HLDA eigenvalue, which measures one-dimensional statistical separation between folded and unfolded ensembles, correlates strongly with transition rates across mutations. In practical terms, that makes it a compact proxy for kinetic behavior.
-
-## Result Correlations
+The leading HLDA eigenvalue, which measures one-dimensional statistical separation between folded and unfolded ensembles, also correlates with transition rates across mutations. This makes it a compact descriptor of mutation-dependent kinetic behavior.
 
 <figure class="paper-figure">
   <img src="{{ '/assets/img/mfpt-lambda-corr-scatter.png' | relative_url }}" alt="Scatter plot showing the correlation between HLDA lambda and mutation-dependent mean first passage time ratios.">
   <figcaption>
-    Mutation-dependent kinetic effects correlate with the HLDA separation metric. The plot compares HLDA λ against the logarithm of mutant-to-wild-type mean first passage time ratios, showing how the one-dimensional HLDA description tracks transition-rate changes across mutations.
+    HLDA λ compared with the logarithm of mutant-to-wild-type mean first passage time ratios. The correlation indicates that the one-dimensional HLDA separation captures mutation-dependent changes in conformational kinetics.
   </figcaption>
 </figure>
 
 <figure class="paper-figure">
   <img src="{{ '/assets/img/mean-residue-weight-scatter-plot.png' | relative_url }}" alt="Scatter plot showing residue-level wild-type HLDA scores against mean mutant-to-wild-type mean first passage time ratios.">
   <figcaption>
-    Wild-type HLDA residue weights already carry positional information about kinetic sensitivity. Residues with larger scores tend to align with stronger mutation effects on conformational transition times.
+    Wild-type HLDA residue scores compared with mean mutation effects on transition times. The trend suggests that the wild-type collective variable contains positional information about kinetic sensitivity.
   </figcaption>
 </figure>
 
-## Why It Matters
+## Significance
 
-Protein structure alone does not determine function. Many functional differences come from thermodynamics and kinetics: how stable states are arranged, how high the barriers are, and how quickly the molecule moves between conformations.
+Protein function is shaped not only by structure, but also by thermodynamics and kinetics: the relative stability of states, the height of free-energy barriers, and the rates of conformational transitions.
 
-This work points toward a cheaper design loop for molecular kinetics. If mutation effects can be inferred from limited local sampling, then simulation can be used more directly as an engineering tool: propose mutations, estimate their likely kinetic effect, and prioritize the most promising candidates before running expensive rare-event simulations.
+By estimating mutation effects from limited metastable-state sampling, the method supports a more efficient simulation-driven design loop: propose mutations, estimate their likely kinetic effect, and prioritize candidates before running more expensive rare-event simulations.
 
-## Technical Takeaway
+## Technical Takeaways
 
-The result is not just that HLDA separates folded and unfolded states. The useful part is that the separation appears predictive: the same low-dimensional description that distinguishes metastable ensembles also carries information about transition-rate changes under mutation.
+The main technical point is not only that HLDA separates folded and unfolded states, but that this separation is predictive. The same low-dimensional description that distinguishes metastable ensembles also carries information about transition-rate changes under mutation.
 
 That connects three things that are often treated separately:
 

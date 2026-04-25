@@ -3,7 +3,13 @@
   {% for paper in featured limit: 1 %}
   <div class="publication-card featured-publication-card inline-featured-paper">
     <p class="pub-label">Featured Paper</p>
-    <h3>{{ paper.title }}</h3>
+    <h3>
+      {% if paper.details %}
+        <a class="pub-title-link" href="{{ paper.details | relative_url }}">{{ paper.title }}</a>
+      {% else %}
+        {{ paper.title }}
+      {% endif %}
+    </h3>
     <p class="pub-meta">{{ paper.authors }}</p>
     <p class="pub-venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}</p>
     {% if paper.summary %}

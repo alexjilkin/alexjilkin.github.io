@@ -1,4 +1,4 @@
-title: Alexander "Alex" Zhilkin
+title: Alexander Zhilkin
 description: Personal academic website
 url: "https://alex-zhilkin.github.io"
 baseurl: ""
@@ -26,7 +26,7 @@ collections:
     permalink: /papers/:name/
 
 author:
-  name: Alexander "Alex" Zhilkin
+  name: Alexander Zhilkin
   email: jilkinalex@gmail.com
   github: alex-zhilkin
   linkedin: alex-zhilkin

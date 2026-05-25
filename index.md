@@ -37,9 +37,9 @@ My earlier research focused on sampling Markov equivalent directed acyclic graph
 
 ## Open-Source Project
 
-I co-authored [lammps.js](https://github.com/lammps/lammps.js), an open-source project that compiles LAMMPS for the browser through WebAssembly and makes interactive molecular simulation possible on the web. The live bead-chain demo below is one example of that workflow in practice.
+I co-authored [lammps.js](https://github.com/lammps/lammps.js), an open-source project that compiles LAMMPS for the browser through WebAssembly and makes interactive molecular simulation possible on the web.
 
-{% include simulation-panel.liquid %}
+To keep this homepage lightweight, the interactive bead-chain example lives on a separate page: [open the lammps.js demo]({{ '/lammps-js/' | relative_url }}).
 
 ## Contact
 
